@@ -13,18 +13,18 @@ export class ContactsService extends Init {
   }
 
   getContacts() {
-    let contacts = JSON.parse(localStorage.getItem('contacts'));
+    const contacts = JSON.parse(localStorage.getItem('contacts'));
     return contacts;
   }
 
   addContact(newContact) {
-    let contact = JSON.parse(localStorage.getItem('contacts'));
+    const contact = JSON.parse(localStorage.getItem('contacts'));
     contact.push(newContact);
     localStorage.setItem('contacts', JSON.stringify(contact));
   }
 
   deleteContact(id) {
-    let contact = JSON.parse(localStorage.getItem('contacts'));
+    const contact = JSON.parse(localStorage.getItem('contacts'));
     for (let i = 0; i < contact.length; i++) {
      if (contact[i].id === id) {
        contact.splice(i, 1);
@@ -34,7 +34,7 @@ export class ContactsService extends Init {
   }
 
   updateContact(oldContact, NewContact) {
-    let contact = JSON.parse(localStorage.getItem('contacts'));
+    const contact = JSON.parse(localStorage.getItem('contacts'));
 
     for (let i; i < contact.length; i++) {
       if (contact[i].id === oldContact[i].id) {

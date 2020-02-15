@@ -3,7 +3,7 @@ export class Init {
  load() {
      if (localStorage.getItem('contacts') === null || localStorage.getItem('contacts') === undefined) {
         console.log('No contacts Found... Creating...');
-        const cont = [
+        let cont = [
           {
             id: 1,
             firstName: 'Carlos',

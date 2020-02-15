@@ -7,6 +7,7 @@ import { ContactsCreateComponent } from './contacts/contacts-create/contacts-cre
 import { ContactsEditComponent } from './contacts/contacts-edit/contacts-edit.component';
 import { ContactsListComponent } from './contacts/contacts-list/contacts-list.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,11 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
