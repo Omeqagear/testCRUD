@@ -7,17 +7,17 @@ import { ContactsService } from '../contacts.service';
   styleUrls: ['./contacts-list.component.css']
 })
 export class ContactsListComponent implements OnInit {
-  conts;
+  contacts;
   constructor(private contactService: ContactsService) { }
 
   ngOnInit() {
-    this.conts = this.contactService.getContacts();
+    this.contacts = this.contactService.getContacts();
   }
 
-  deleteEmployee(id) {
-    for (let i = 0; i < this.conts.length; i++) {
-      if (this.conts[i].id === id) {
-          this.conts.splice(i, 1);
+  deleteContact(id) {
+    for (let i = 0; i < this.contacts.length; i++) {
+      if (this.contacts[i].id === id) {
+          this.contacts.splice(i, 1);
       }
     }
 

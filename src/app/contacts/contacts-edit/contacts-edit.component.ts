@@ -13,9 +13,10 @@ export class ContactsEditComponent implements OnInit {
 
   cont;
   id;
+  // tslint:disable-next-line: variable-name
   constructor(private _Activatedroute: ActivatedRoute, private contService: ContactsService, private router: Router) { }
 
-  @ViewChild('form', {read: NgForm, static: true}) form: any;
+  @ViewChild('f', {read: NgForm, static: true}) form: any;
 
   ngOnInit() {
     this.id = this._Activatedroute.snapshot.params.id;
@@ -25,7 +26,7 @@ export class ContactsEditComponent implements OnInit {
   }
   onSubmit() {
     if (this.form.value) {
-      console.log(this.form.value)
+      console.log(this.form.value);
       this.contService.updateContact(this.cont, this.form.value);
       this.router.navigate(['contacts-list']);
     }

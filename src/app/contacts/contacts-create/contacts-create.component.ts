@@ -18,7 +18,7 @@ export class ContactsCreateComponent implements OnInit {
 
   constructor(private contactService: ContactsService, private router: Router) { }
 
-  @ViewChild('form', {read: NgForm, static: true}) form: any;
+  @ViewChild('f', {read: NgForm, static: true}) form: any;
 
   ngOnInit() {
     this.contacts = this.contactService.getContacts();
@@ -26,7 +26,7 @@ export class ContactsCreateComponent implements OnInit {
 
   onSubmit() {
     if (this.form.value) {
-    const newContact = {
+    let newContact = {
       id: uuid(),
       firstName: this.form.value.firstName,
       lastName: this.form.value.lastName,
