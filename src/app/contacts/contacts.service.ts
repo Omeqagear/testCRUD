@@ -34,13 +34,13 @@ export class ContactsService extends Init {
   }
 
   updateContact(oldContact, newContact) {
-    let contact = JSON.parse(localStorage.getItem('contacts'));
+    let contacts = JSON.parse(localStorage.getItem('contacts'));
 
-    for (let i; i < contact.length; i++) {
-      if (contact[i].id === oldContact.id) {
-        contact[i] = newContact;
+    for (let i; i < contacts.length; i++) {
+      if (contacts[i].id == oldContact.id) {
+        contacts[i] = newContact;
       }
     }
-    localStorage.setItem('contacts', JSON.stringify(contact));
+    localStorage.setItem('contacts', JSON.stringify(contacts));
   }
 }

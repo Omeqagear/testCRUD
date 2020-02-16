@@ -4,9 +4,10 @@
   
       <div class="card col-sm">
         <div class="card-body">
-          <h4 class="card-title"> <strong>Name:</strong>{{cont.firstName}} {{cont.lastName}}</h4>
-          <p class="card-text"> <strong>Languages Known: </strong>{{cont.languages}}
+          <h4 class="card-title"> <strong>Name:</strong> {{cont.firstName}} {{cont.lastName}}</h4>
+          <p class="card-text"> <strong>Languages Known: </strong> {{cont.languages}}
           </p>
+          <p class='card-text'><strong>Phone Number: </strong> {{cont.phoneNumber}} </p>
           <a [routerLink]="['/contacts-edit', cont.id]" class="btn btn-primary">Edit</a>
           <button (click)="deleteContact(cont.id)" class="btn btn-danger">Delete</button>
         </div>

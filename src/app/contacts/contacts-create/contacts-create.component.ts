@@ -11,9 +11,9 @@ import { NgForm } from '@angular/forms';
 })
 export class ContactsCreateComponent implements OnInit {
 
-  contacts;
-  text;
-  oldText;
+  contacts: any;
+  text: any;
+  oldText: any;
   appState = 'default';
 
   constructor(private contactService: ContactsService, private router: Router) { }
@@ -30,6 +30,7 @@ export class ContactsCreateComponent implements OnInit {
       id: uuid(),
       firstName: this.form.value.firstName,
       lastName: this.form.value.lastName,
+      phoneNumber: this.form.value.phoneNumber,
       languages: this.form.value.languages,
 
     };

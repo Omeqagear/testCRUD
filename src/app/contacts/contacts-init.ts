@@ -8,17 +8,20 @@ export class Init {
             id: 1,
             firstName: 'Carlos',
             lastName: 'Mendez',
+            phoneNumber: '557-442-4383',
             languages: ['Spanish', 'English', 'German']
           },
           {
             id: 2,
             firstName: 'Abhishek',
             lastName: 'Singh',
+            phoneNumber: '557-442-4383',
             languages: ['Hindi', 'Marathi', 'English']
           }, {
             id: 3,
             firstName: 'Rob',
             lastName: 'Peterson',
+            phoneNumber: '557-442-4383',
             languages: ['English']
           },
         ];
