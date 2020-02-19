@@ -15,7 +15,7 @@ export class ContactsCreateComponent implements OnInit {
   text: any;
   oldText: any;
   appState = 'default';
-
+  phoneNumberPattern = '[0-9]{3}-[0-9]{3}-[0-9]{4}';
   constructor(private contactService: ContactsService, private router: Router) { }
 
   @ViewChild('f', {read: NgForm, static: true}) form: any;

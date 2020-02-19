@@ -11,8 +11,9 @@ import { NgForm, Form } from '@angular/forms';
 })
 export class ContactsEditComponent implements OnInit {
 
-  cont;
-  id;
+  cont: any;
+  id: any;
+  phoneNumberPattern = '[0-9]{3}-[0-9]{3}-[0-9]{4}';
   // tslint:disable-next-line: variable-name
   constructor(private _Activatedroute: ActivatedRoute, private contService: ContactsService, private router: Router) { }
 
