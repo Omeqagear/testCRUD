@@ -30,12 +30,22 @@
                   </div>
               </div>
               <div class="form-group">
-                <input type="tel" class="form-control" #second_phoneNumberValid='ngModel' [pattern] ='phoneNumberPattern' name="second_phoneNumber" [(ngModel)]="contacts.second_phoneNumber" placeholder="Primary Phone Number"
+                <input type="tel" class="form-control" #second_phoneNumberValid='ngModel' [pattern] ='phoneNumberPattern' name="second_phoneNumber" [(ngModel)]="contacts.second_phoneNumber" placeholder="Secondary Phone Number"
                   value="">
                   <div *ngIf="second_phoneNumberValid.errors && (second_phoneNumberValid.dirty || second_phoneNumberValid.touched)">
                     <p  class="text-danger" *ngIf="second_phoneNumberValid.errors.required">Valid Phone Number required</p>
                     <div class='text-danger' *ngIf="second_phoneNumberValid.errors.pattern">  
                       Phone number not valid. Only accepts the following format XXX-XXX-XXXX  
+                    </div> 
+                  </div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" #validEmail='ngModel'  name="email" [(ngModel)]="contacts.email" placeholder="Enter your Email"
+                  value="" required>
+                  <div *ngIf="validEmail.errors && (validEmail.dirty || validEmail.touched)">
+                    <p  class="text-danger" *ngIf="validEmail.errors.required">Valid Email Address required</p>
+                    <div class='text-danger' *ngIf="validEmail.errors.pattern">  
+                      Email address not valid. Only accepts the following format XXX@XXXX.XXX  
                     </div> 
                   </div>
               </div>

@@ -9,6 +9,8 @@
           </p>
           <p class='card-text'><strong>Phone Number: </strong> {{cont.phoneNumber}} </p>
           <div *ngIf='cont.second_phoneNumber'> <p class="card-text"><strong>Secondary Phone Number: </strong> {{cont.second_phoneNumber}}</p></div>
+          
+          <p class='card-text'><strong>Email: </strong>{{cont.email}}</p>
           <a [routerLink]="['/contacts-edit', cont.id]" class="btn btn-primary">Edit</a>
           <button (click)="deleteContact(cont.id)" class="btn btn-danger">Delete</button>
         </div>

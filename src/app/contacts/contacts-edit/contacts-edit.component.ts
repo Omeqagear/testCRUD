@@ -14,6 +14,7 @@ export class ContactsEditComponent implements OnInit {
   cont: any;
   id: any;
   phoneNumberPattern = '[0-9]{3}-[0-9]{3}-[0-9]{4}';
+  emailPattern = '/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/';
   // tslint:disable-next-line: variable-name
   constructor(private _Activatedroute: ActivatedRoute, private contService: ContactsService, private router: Router) { }
 
