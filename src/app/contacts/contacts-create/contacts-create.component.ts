@@ -31,6 +31,8 @@ export class ContactsCreateComponent implements OnInit {
       firstName: this.form.value.firstName,
       lastName: this.form.value.lastName,
       phoneNumber: this.form.value.phoneNumber,
+      second_phoneNumber: this.form.value.second_phoneNumber,
+      email: this.form.value.email,
       languages: this.form.value.languages,
 
     };

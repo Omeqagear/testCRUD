@@ -1,4 +1,4 @@
-<div class="row">
+<div class="container">
     <ul *ngFor="let cont of contacts">
   
   
@@ -8,6 +8,7 @@
           <p class="card-text"> <strong>Languages Known: </strong> {{cont.languages}}
           </p>
           <p class='card-text'><strong>Phone Number: </strong> {{cont.phoneNumber}} </p>
+          <div *ngIf='cont.second_phoneNumber'> <p class="card-text"><strong>Secondary Phone Number: </strong> {{cont.second_phoneNumber}}</p></div>
           <a [routerLink]="['/contacts-edit', cont.id]" class="btn btn-primary">Edit</a>
           <button (click)="deleteContact(cont.id)" class="btn btn-danger">Delete</button>
         </div>

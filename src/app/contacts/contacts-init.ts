@@ -8,7 +8,9 @@ export class Init {
             id: 1,
             firstName: 'Carlos',
             lastName: 'Mendez',
-            phoneNumber: '557-442-4383',
+            primay_phoneNumber: '557-442-4383',
+            second_phoneNumber: '557-456-7779',
+            email : 'c.mendez@supergato.com',
             languages: ['Spanish', 'English', 'German']
           },
           {
@@ -16,12 +18,16 @@ export class Init {
             firstName: 'Abhishek',
             lastName: 'Singh',
             phoneNumber: '557-442-4383',
+            second_phoneNumber: '557-486-7769',
+            email : 'calamazoo@bugaloo.com',
             languages: ['Hindi', 'Marathi', 'English']
           }, {
             id: 3,
             firstName: 'Rob',
             lastName: 'Peterson',
             phoneNumber: '557-442-4383',
+            second_phoneNumber: '557-456-7779',
+            email : 'robshesse@bdsr.com',
             languages: ['English']
           },
         ];

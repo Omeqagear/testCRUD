@@ -33,6 +33,16 @@
                   </div>
               </div>
               <div class="form-group">
+                <input type="tel" class="form-control" #second_phoneNumberValid='ngModel' [pattern] ='phoneNumberPattern' name="second_phoneNumber" [(ngModel)]="cont.second_phoneNumber" placeholder="Primary Phone Number"
+                  value="">
+                  <div *ngIf="second_phoneNumberValid.errors && (second_phoneNumberValid.dirty || second_phoneNumberValid.touched)">
+                    <p  class="text-danger" *ngIf="second_phoneNumberValid.errors.required">Valid Phone Number required</p>
+                    <div class='text-danger' *ngIf="second_phoneNumberValid.errors.pattern">  
+                      Phone number not valid. Only accepts the following format XXX-XXX-XXXX  
+                    </div> 
+                  </div>
+              </div>
+              <div class="form-group">
                 <select class="form-control" name="languages" [(ngModel)]="cont.languages" multiple>
                   <option class="hidden" selected disabled>Please Languages You Know?</option>
                   <option value="Hindi">Hindi</option>

@@ -7,7 +7,7 @@ import { ContactsService } from '../contacts.service';
   styleUrls: ['./contacts-list.component.css']
 })
 export class ContactsListComponent implements OnInit {
-  contacts;
+  contacts: any;
   constructor(private contactService: ContactsService) { }
 
   ngOnInit() {
